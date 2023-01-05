@@ -1,4 +1,5 @@
 import React from "react"
+import { GeoAltFill, Truck } from "react-bootstrap-icons"
 
 function Help(){
     return (
@@ -6,11 +7,11 @@ function Help(){
             <p>Need help? Call us (+98) 0234 456 789</p>
             <div className="help-rest-flex">
                 <div className="our-store">
-                    <img src="#" alt="location icon"/>
+                    <a href="#"><GeoAltFill /></a>
                     <p>Our store</p>
                 </div>
                 <div className="track-order">
-                    <img src="#" alt="truck icon"/>
+                    <a href="#"><Truck /></a>
                     <p>Track your order</p>
                 </div>
             </div>
