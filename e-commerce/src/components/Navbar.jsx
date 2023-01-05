@@ -10,9 +10,9 @@ import SubMenu from './SubMenu';
 
 function NavBar() {
   return (
-    <Navbar  expand="xxl" className='m-auto justify-content-end navbar-container'>
+    <Navbar  expand="xxl" className='m-auto navbar-container'>
       <Container fluid >
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#" className='navbar-3-flex'>
           <img src={Logo} alt='logo'/>
         </Navbar.Brand>
 
@@ -30,7 +30,10 @@ function NavBar() {
             <Button variant="warning">Search</Button>
           </Form>
           
-          <div className='navbar-rest-flex'>
+          
+
+        </Navbar.Collapse>
+        <div className='navbar-rest-flex'>
             <div className='navbar-sign-in'>
               <a href='#'><Person color="white"/> </a>
               <a href='#'>Sign in</a>
@@ -42,8 +45,6 @@ function NavBar() {
               <a href='#'><CartCheck color="white"/> </a>
             </div>
           </div>
-
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

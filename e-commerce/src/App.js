@@ -5,6 +5,8 @@ import NavBar from './components/Navbar';
 import Card from './components/Card';
 import SmallCard from './components/SmallCard';
 import SubMenu from './components/SubMenu';
+import Promote from './components/Promote';
+import Sale from './components/Sale';
 // import ImagesData from './data/ImagesData.json'
 function App() {
   return (
@@ -17,8 +19,25 @@ function App() {
         
       </div>
       <div className='main'>
-        <div className='first-promote-section'></div>
-        <div className='second-slider-section'>
+        <div className='first-promote-section section'>
+          <Promote />
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className='second-slider-section section'>
           <div className='smallCard'>
             <h1>Slider Here</h1>
             <SmallCard
@@ -38,7 +57,7 @@ function App() {
             />
           </div>
         </div>
-        <div className='third-popular-section'>
+        <div className='third-popular-section section'>
         <div className='popular-product'>
           <h1>Popular Products Here</h1>
           <div className='cards'>
@@ -103,13 +122,15 @@ function App() {
     
         </div>
         </div>
-        <div className='fourth-sale-section'></div>
-        <div className='fifth-add-to-cart-section'></div>
-        <div className='sixth-trust-section'></div>
-        <div className='seventh-trust-section'></div>
-        <div className='eighth-team-section'></div>
-        <div className='nineth-partner-section'></div>
-        <div className='tenth-news-section'></div>
+        <div className='fourth-sale-section section'>
+          <Sale />
+        </div>
+        <div className='fifth-add-to-cart-section section'></div>
+        <div className='sixth-trust-section section'></div>
+        <div className='seventh-trust-section section'></div>
+        <div className='eighth-team-section section'></div>
+        <div className='nineth-partner-section section'></div>
+        <div className='tenth-news-section section'></div>
       </div>
       <div className='footer'></div>
     </div>
