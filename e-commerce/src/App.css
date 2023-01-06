@@ -1,12 +1,16 @@
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
 
 .App {
   max-width: 1440px;
   margin: auto;
-  font-family: 'Poppins' sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .section {
-  margin-top: 50px ;
+  margin-top: 50px;
   margin-bottom: 50px;
   border-bottom: 1px solid black;
 }
@@ -32,6 +36,7 @@
 .our-store {
   display: flex;
 }
+
 .track-order {
   display: flex;
 
@@ -42,12 +47,13 @@
 .navbar-container {
   width: 100%;
   background-color: #003F62;
-  
+
 }
+
 .navbar-3-flex {
   display: flex;
   width: 33%;
-  
+
 }
 
 /* NAVBAR REST FLEX */
@@ -59,7 +65,7 @@
   width: 15%;
 }
 
-.navbar-sign-in > a {
+.navbar-sign-in>a {
   color: white;
 }
 
@@ -68,7 +74,7 @@
 .submenu-container {
   display: flex;
   justify-content: space-between;
-  background-color: blueviolet;
+  background-color: #F4F4F4;
 }
 
 
@@ -76,15 +82,7 @@
 
 /* Menu bar under Navbar */
 
-.cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  width: 100%;
-}
-.Card {
-  width: 25%;
-}
+
 
 /* CARDS */
 
@@ -92,16 +90,38 @@
 
 /* SMALL CARD */
 
+.small-card-container {
+  gap: 100px;
+}
+
 .small-card-inside-flex {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   border: 2px grey solid;
   border-radius: 20px;
-  width: 300px;
+  width: 381.63px;
+  height: 147px;
 }
+
 .smallCard {
   display: flex;
-  
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+.small-card-inside-flex>div>h2 {
+  font-size: 23.38px;
+  color: #003F62;
+}
+
+.small-card-inside-flex>div>h3 {
+  font-size: 17.09px;
+  color: #4A4A4A;
 }
 
 
@@ -115,19 +135,57 @@
   align-items: center;
   /* end yaj gapguigeer zai awahiig bagshaas asuu */
 }
+
 .promote-left {
   width: 20%;
 }
+
 .promote-right {
   width: 20%;
 }
 
-.promote-btns {
+.promote-btns {}
+
+
+/* POPULAR PRODCUT SECTION */
+
+.popular-product>h1 {
+  color: #1B5A7D;
+  font-size: 27.38px;
+}
+.popular-card {
+  width: 308.83px;
+  height: 313.75px;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 30%%;
 }
 
 
+.popular-flex {
+  border: 2px black solid;
+  border-radius: 20px;
+}
 
+.popular-flex > div > h2 {
+  color: #003F62;
+  font-size: 17.0px;
+}
+.popular-flex > div > h3 {
+  color: #4A4A4A;
+  font-size: 17.0px;
+}
 
+.popular-flex > div {
+  padding: 20px;
+}
+.popular-flex > img {
+  padding: 20px;
+  display: flex;;
+}
 
 
 
@@ -137,3 +195,13 @@
   display: flex;
   margin: auto;
 } */
+
+
+
+
+/* slider img width */
+
+
+.promote-right > img {
+  width: 400px;
+}

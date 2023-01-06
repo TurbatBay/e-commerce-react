@@ -2,13 +2,49 @@ import './App.css';
 // import MainMenu from './components/MainMenu'
 import Help from './components/Help';
 import NavBar from './components/Navbar';
-import Card from './components/Card';
+import Cart from './components/Cart';
 import SmallCard from './components/SmallCard';
 import SubMenu from './components/SubMenu';
 import Promote from './components/Promote';
 import Sale from './components/Sale';
-// import ImagesData from './data/ImagesData.json'
+import cardData from './data/card';
+import popularData from './data/popularCard';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import carousData from './data/carousData';
+
 function App() {
+  const sliderData = cardData.map(data => {
+    return (
+      <SmallCard
+        img = {data.imgURL}
+        title = {data.title}
+        items = {data.items}
+      />
+    )
+  })
+
+  const popData = popularData.map(data => {
+    return(
+      <Cart 
+      className= {data.className}
+      imgURL = {data.imgURL}
+      title = {data.title}
+      price = {data.price}
+      rating = {data.rating}
+
+      />
+    )
+  })
+
+  const carouselData = carousData.map(data => {
+    return (
+      <Promote
+        img = {data.img}
+        title = {data.title}
+      />
+    )
+  })
   return (
     <div className="App">
       <div className='header'>
@@ -20,103 +56,21 @@ function App() {
       </div>
       <div className='main'>
         <div className='first-promote-section section'>
-          <Promote />
+          <AliceCarousel>
+            {carouselData}
+          </AliceCarousel>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <div className='second-slider-section section'>
           <div className='smallCard'>
-            <h1>Slider Here</h1>
-            <SmallCard
-              img= "..."
-              title= "laptop"
-              items= "2 items"
-            />
-            <SmallCard
-              img
-              title= "TV"
-              items= "12 items"
-            />
-            <SmallCard
-              img= "..."
-              title= "IMAC"
-              items= "2 items"
-            />
+            {sliderData}
           </div>
         </div>
         <div className='third-popular-section section'>
         <div className='popular-product'>
           <h1>Popular Products Here</h1>
           <div className='cards'>
-          <Card 
-            className="Card"
-            img= "laptop.png"
-            title= "I watch"
-            price= "$12.70"
-            rating="..."
-          />
-          <Card  
-            className="Card"
-            img= "laptop.png"
-            title= "TV"
-            price= "$200"
-            rating="..."
-          />
-          <Card 
-            className="Card"
-            img= "laptop.png"
-            title= "Laptop"
-            price= "$999"
-            rating="..."
-          />
-          <Card 
-            className="Card"
-            img= "laptop.png"
-            title= "I watch"
-            price= "$12.70"
-            rating="..."
-          />
-          <Card 
-            className="Card"
-            img= "laptop.png"
-            title= "TV"
-            price= "$200"
-            rating="..."
-          />
-          <Card 
-            className="Card"
-            img= "laptop.png"
-            title= "Laptop"
-            price= "$999"
-            rating="..."
-          />
-          <Card 
-            className="Card"
-            img= "laptop.png"
-            title= "I watch"
-            price= "$12.70"
-            rating="..."
-          />
-          <Card 
-            className="Card"
-            img= "laptop.png"
-            title= "TV"
-            price= "$200"
-            rating="..."
-          />
+            {popData}
           </div>
           
     

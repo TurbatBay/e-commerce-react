@@ -1,12 +1,24 @@
 import React from 'react'
+import { propTypes } from 'react-bootstrap/esm/Image'
 import Buttons from './Buttons'
 import CameraImage from './images/camera.png'
+import carousData from '../data/carousData'
 
-function Promote() {
+function Promote(props) {
+
+  const carouselData = carousData.map(data => {
+    return (
+      <Promote
+        img = {data.img}
+        title = {data.title}
+      />
+    )
+  })
+
     return(
         <div className='promote-inner'>
             <div className='promote-left'>
-              <h2>Canon camera</h2>
+              <h2>{props.title}</h2>
               <div className='promote-btns'>
                 <Buttons 
                     id="1"
@@ -24,7 +36,7 @@ function Promote() {
               </div>
             </div>
             <div className='promote-right'>
-                <img src={CameraImage}/>
+                <img src={props.img}/>
             </div>
           </div>
     )
