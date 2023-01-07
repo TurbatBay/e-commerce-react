@@ -79,7 +79,9 @@ function App() {
         <div className='fourth-sale-section section'>
           <Sale />
         </div>
-        <div className='fifth-add-to-cart-section section'></div>
+        <div className='fifth-add-to-cart-section section'>
+          <h1>Add to Cart section here</h1>
+        </div>
         <div className='sixth-trust-section section'></div>
         <div className='seventh-trust-section section'></div>
         <div className='eighth-team-section section'></div>
