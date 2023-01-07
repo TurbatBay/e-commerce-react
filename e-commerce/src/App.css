@@ -161,7 +161,7 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 30%;
+  width: 100%;
 }
 
 
@@ -182,9 +182,14 @@
 .popular-flex > div {
   padding: 20px;
 }
-.popular-flex > img {
+/* .popular-flex > img {
   padding: 20px;
   display: flex;;
+} */
+.popular-card-img {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
 }
 
 

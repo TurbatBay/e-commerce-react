@@ -6,7 +6,7 @@ function Cart(props) {
   return (
     <div className='popular-card'>
       <div className="popular-flex">
-          <img src={props.imgURL} width="187px" height="173px" alt='image'/>
+          <img src={props.imgURL} className="popular-card-img" height="173px" alt='image'/>
           <div>
               <h2>{props.title}</h2>
               <h3>{props.price}</h3>
