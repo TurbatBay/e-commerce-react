@@ -5,7 +5,7 @@ import MyImage from './images/iwatch.png';
 
 function SmallCard(props) {
   return (
-    <div className='small-card-container'>
+    <div className='small-card-container '>
       <div className="small-card-inside-flex">
           <img src={props.img} width="150px" alt='image'/>
           <div>

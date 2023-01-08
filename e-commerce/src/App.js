@@ -14,6 +14,9 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import carousData from './data/carousData';
 import dropData from './data/dropData'
 import SubDropDown from './components/SubMenuDrop';
+import Swiper from './components/Swiper';
+import Swipers from './components/Swiper';
+import TrustSection from './components/Trust';
 
 function App() {
   const sliderData = cardData.map(data => {
@@ -76,7 +79,7 @@ function App() {
 
         <div className='second-slider-section section'>
           <div className='smallCard'>
-            {sliderData}
+          <Swipers></Swipers>
           </div>
         </div>
         <div className='third-popular-section section'>
@@ -96,9 +99,11 @@ function App() {
           <h1>Add to Cart section here</h1>
         </div>
         <div className='sixth-trust-section section'>
-          <h1>Added Trust section to test branch</h1>
+          <TrustSection/>
         </div>
-        <div className='seventh-trust-section section'></div>
+        <div className='seventh-trust-section section'>
+          
+        </div>
         <div className='eighth-team-section section'></div>
         <div className='nineth-partner-section section'></div>
         <div className='tenth-news-section section'></div>
