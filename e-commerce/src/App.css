@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-
 .App {
   max-width: 1440px;
   margin: auto;
@@ -15,13 +14,16 @@
   border-bottom: 1px solid black;
 }
 
+
+
+
+
 /* HELP SECTION */
 .help-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  background-color: antiquewhite;
   padding-right: 16px;
   padding-left: 16px;
 }
@@ -35,17 +37,28 @@
 
 .our-store {
   display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.out-store > a {
+  color: black;
 }
 
 .track-order {
   display: flex;
+  justify-content: space-between;
+  width: 46%;
 
 }
+
+
+
+
 
 /* NAVBAR */
 
 .navbar-container {
-  width: 100%;
+  width: 100vw;
   background-color: #003F62;
 
 }
@@ -53,8 +66,12 @@
 .navbar-3-flex {
   display: flex;
   width: 33%;
+  margin-left: 100px;
 
 }
+
+
+
 
 /* NAVBAR REST FLEX */
 
@@ -63,11 +80,18 @@
   justify-content: space-between;
   align-items: center;
   width: 15%;
+  margin-right: 100px;
 }
 
 .navbar-sign-in>a {
   color: white;
+  text-decoration: none;
+  font-size: 14px;
 }
+
+
+
+
 
 /* SUBMENU HERE */
 
@@ -75,6 +99,8 @@
   display: flex;
   justify-content: space-between;
   background-color: #F4F4F4;
+  padding-right: 60px;
+  padding-left: 60px;
 }
 
 
@@ -126,25 +152,44 @@
 
 
 
+
+
 /* PROMOTE SECTION HERE */
 
 .promote-inner {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   /* end yaj gapguigeer zai awahiig bagshaas asuu */
 }
 
 .promote-left {
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+}
+.promote-left > h2 {
+  width: 40%;
+  color: #1B5A7D;
+  font-size: 43px;
+  font-weight: bold;
 }
 
 .promote-right {
-  width: 20%;
+  width: 40%;
 }
 
-.promote-btns {}
+.promote-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 45%;
+}
+
+
+
+
 
 
 /* POPULAR PRODCUT SECTION */
@@ -191,6 +236,8 @@
   height: 15vw;
   object-fit: cover;
 }
+
+
 
 
 

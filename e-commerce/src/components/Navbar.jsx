@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from "./images/electon-logo.png";
 import { Person, Heart, CartCheck } from 'react-bootstrap-icons';
 import SubMenu from './SubMenu';
+import IconCount from "./images/icon-count.png";
 
 function NavBar() {
   return (
@@ -33,16 +34,21 @@ function NavBar() {
           
 
         </Navbar.Collapse>
+
+
         <div className='navbar-rest-flex'>
             <div className='navbar-sign-in'>
-              <a href='#'><Person color="white"/> </a>
+              <a href='#'><Person color="white" size="30px"/> </a>
+              
               <a href='#'>Sign in</a>
             </div>
             <div className='navbar-heart-icon'>
-              <a href='#'><Heart color="white"/> </a>
+              <a href='#'><Heart color="white" size="20px" /> </a>
+              <img src={IconCount}  width = "15px" />
             </div>
             <div className='navbar-market-icon'>
-              <a href='#'><CartCheck color="white"/> </a>
+              <a href='#'><CartCheck color="white" size="20px"/> </a>
+              <img src={IconCount}  width = "15px" />
             </div>
           </div>
       </Container>

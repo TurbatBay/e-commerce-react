@@ -21,16 +21,6 @@ function Promote(props) {
               <h2>{props.title}</h2>
               <div className='promote-btns'>
                 <Buttons 
-                    id="1"
-                    title= "Shop now"
-                    backgroundColor= "warning"
-                    color="#fff"
-                />
-                <Buttons 
-                    id="2"
-                    title= "View more"
-                    backgroundColor= "outline-secondary"
-                    color="#316887"
                 />
                 
               </div>
