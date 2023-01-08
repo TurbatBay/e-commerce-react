@@ -12,6 +12,8 @@ import popularData from './data/popularCard';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import carousData from './data/carousData';
+import dropData from './data/dropData'
+import SubDropDown from './components/SubMenuDrop';
 
 function App() {
   const sliderData = cardData.map(data => {
@@ -45,12 +47,23 @@ function App() {
       />
     )
   })
+
+  const dropDownData = dropData.map(data => {
+    return (
+      <SubMenu
+        title = {data.title}
+        />
+    )
+  })
+
   return (
     <div className="App">
       <div className='header'>
         <div className='help'><Help /></div>
         <div className='navbar'><NavBar /></div>
-        <div className='submenu'><SubMenu /></div>
+        <div className='submenu'>
+            {dropDownData}
+          </div>
 
         
       </div>

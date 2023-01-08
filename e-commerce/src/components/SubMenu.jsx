@@ -1,40 +1,56 @@
-import React from "react"
-import {Nav, NavDropdown, NavLink} from "react-bootstrap"
-import Dropdown from 'react-bootstrap/Dropdown';
+import React from "react";
+import { Nav, NavDropdown, NavLink } from "react-bootstrap";
+import Dropdown from "react-bootstrap/Dropdown";
+import SubDropDown from "./SubMenuDrop";
 
-function SubMenu() {
-    return (
-        <div className="submenu-container">
-            <div className="submenu-first-dropdown">
-            <Dropdown>
-                <Dropdown.Toggle variant="warning" id="dropdown-basic">
-                Browse Categories
-                </Dropdown.Toggle>
-        
-                <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-            </div>
+function SubMenu(props) {
 
-            <div className="submenu-middle-dropdown">Middle hesegee hiih chakra hursengue</div>
+    
+  return (
+    <div className="submenu-container">
+      <div className="submenu-first-dropdown">
+        <Dropdown>
+          <Dropdown.Toggle variant="warning" id="dropdown-basic">
+            Browse Categories
+          </Dropdown.Toggle>
 
-            <div>30 Days Free Return</div>
-        </div>
-    );
-  }
-  
-  export default SubMenu;
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
 
+      <div className="submenu-middle-dropdown">
+        <Nav>
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title={props.title}
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+      </div>
 
+      <div className="submenu-text">30 Days Free Return</div>
+    </div>
+  );
+}
 
-
-
+export default SubMenu;
 
 // const SubMenu = () => {
-//     const subMenu = 
+//     const subMenu =
 //     props.children.length > 0 ?(
 //         <NavDropdown title={props.title} id="basic-nav-dropdown">
 
@@ -48,10 +64,6 @@ function SubMenu() {
 //         </div>
 //     );
 // };
-
-
-
-
 
 /* 
 import React from "react"
