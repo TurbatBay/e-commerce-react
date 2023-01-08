@@ -82,7 +82,9 @@ function App() {
         <div className='fifth-add-to-cart-section section'>
           <h1>Add to Cart section here</h1>
         </div>
-        <div className='sixth-trust-section section'></div>
+        <div className='sixth-trust-section section'>
+          <h1>Added Trust section to test branch</h1>
+        </div>
         <div className='seventh-trust-section section'></div>
         <div className='eighth-team-section section'></div>
         <div className='nineth-partner-section section'></div>
