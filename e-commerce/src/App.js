@@ -17,6 +17,8 @@ import SubDropDown from './components/SubMenuDrop';
 import Swipers from './components/Swiper';
 import awardsData from './data/awards';
 import TrustSection from './components/Trust';
+import TeamSection from './components/TeamSection';
+import teamData from './data/teamCardData';
 
 
 
@@ -74,6 +76,15 @@ function App() {
     )
 })
 
+  const teamPeopleData = teamData.map(data=> {
+    return <TeamSection 
+    img = {data.imgURL}
+    title = {data.title}
+    text = {data.text}
+    />
+
+  })
+
   return (
     <div className="App">
       <div className='header'>
@@ -115,14 +126,14 @@ function App() {
         </div>
         <div className='sixth-trust-section section'>
           <TrustSection/>
-            
         </div>
-        <div className='seventh-trust-section section'>
-          
+        <div className='seventh-team-section section'>
+          {teamPeopleData}
         </div>
-        <div className='eighth-team-section section'></div>
-        <div className='nineth-partner-section section'></div>
-        <div className='tenth-news-section section'></div>
+        <div className='eighth-partner-section section'>
+        
+        </div>
+        <div className='nineth-news-section section'></div>
       </div>
       <div className='footer'></div>
     </div>
