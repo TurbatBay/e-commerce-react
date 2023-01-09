@@ -22,6 +22,7 @@ import teamData from './data/teamCardData';
 import PartnerSection from './components/PartnerSection';
 import NewsSection from './components/News';
 import dataNews from './data/newsData';
+import Footer from "./components/Footer"
 
 
 
@@ -152,8 +153,8 @@ function App() {
             {newsData}
         </div>
       </div>
-      <div className='footer'>
-        
+      <div className='footer section'>
+        <Footer/>
       </div>
     </div>
   );
