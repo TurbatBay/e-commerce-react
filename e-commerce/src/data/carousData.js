@@ -1,11 +1,11 @@
 const carousData = [
     {
         title: "Canon camerea",
-        img: "./images/camera.png"
+        img: "https://cdn11.bigcommerce.com/s-fc1fc/products/49811/images/161367/eos-r5_1__77370.1594240638.1280.1280__09874.1634332220.500.750.png?c=2"
     },
     {
         title: "I Watch",
-        img: "./images/iwatch.png"
+        img: "https://static-freedomusainc1.netdna-ssl.com/blog/wp-content/uploads/2017/11/Kingston-Hyper-X-Cloud-Gaming-Headset-e1510583720995.png"
     },
     {
         title: "Turbat Bay",

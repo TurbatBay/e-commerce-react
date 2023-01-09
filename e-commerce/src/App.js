@@ -22,7 +22,7 @@ import teamData from './data/teamCardData';
 import PartnerSection from './components/PartnerSection';
 import NewsSection from './components/News';
 import dataNews from './data/newsData';
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 
 
