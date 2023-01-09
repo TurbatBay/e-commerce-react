@@ -16,22 +16,22 @@ import { Pagination, Navigation } from "swiper";
 
 function TeamSection(props) {
 
-    <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        slidesPerGroup={3}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      ></Swiper>
+    // <Swiper
+    //     slidesPerView={3}
+    //     spaceBetween={30}
+    //     slidesPerGroup={3}
+    //     loop={true}
+    //     loopFillGroupWithBlank={true}
+    //     pagination={{
+    //       clickable: true,
+    //     }}
+    //     navigation={true}
+    //     modules={[Pagination, Navigation]}
+    //     className="mySwiper"
+    //   ></Swiper>
 
     return(
-        <SwiperSlide>
+        // <SwiperSlide>
         <div className="team-card-container">
                 <div className="team-card">
                     {props.openSpot === 0 && <div className="team-card-badge">SOLD OUT</div>}
@@ -44,7 +44,7 @@ function TeamSection(props) {
                     </div>
                 </div>
         </div>
-        </SwiperSlide>
+        // </SwiperSlide>
     )
 }
 

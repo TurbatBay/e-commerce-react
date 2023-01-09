@@ -342,8 +342,15 @@
 
 
 
+/* PARTNER CONTAINER */
 
+.partner-container {
+  background-color: #E2F4FF;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
 
+}
 
 
 

@@ -19,6 +19,7 @@ import awardsData from './data/awards';
 import TrustSection from './components/Trust';
 import TeamSection from './components/TeamSection';
 import teamData from './data/teamCardData';
+import PartnerSection from './components/PartnerSection';
 
 
 
@@ -133,7 +134,7 @@ function App() {
           {teamPeopleData}
         </div>
         <div className='eighth-partner-section section'>
-        
+        <PartnerSection/>
         </div>
         <div className='nineth-news-section section'></div>
       </div>
