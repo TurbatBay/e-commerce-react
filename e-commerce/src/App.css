@@ -247,6 +247,44 @@
 
 
 
+/* TRUST SECTION CONTAINER */
+
+.trust-section-container {
+  background-color: #E2F4FF;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 155px;
+  padding-left:130px;
+  padding-right: 130px;
+  
+}
+
+.trust-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+
+}
+
+.trust-image {
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.trust-text-1 {
+  color: #003F62;
+  font-size: 22px;
+  font-weight: 600;
+}
+.trust-text-2 {
+  color: #003F62;
+  font-size: 18px;
+}
+
+
 /* SALE SECTION STARTS HERE */
 
 /* .sale-container {

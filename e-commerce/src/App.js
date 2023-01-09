@@ -14,9 +14,14 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import carousData from './data/carousData';
 import dropData from './data/dropData'
 import SubDropDown from './components/SubMenuDrop';
-import Swiper from './components/Swiper';
 import Swipers from './components/Swiper';
+import awardsData from './data/awards';
 import TrustSection from './components/Trust';
+
+
+
+
+
 
 function App() {
   const sliderData = cardData.map(data => {
@@ -59,6 +64,16 @@ function App() {
     )
   })
 
+  const awardsContentData = awardsData.map(data => {
+    return(
+        <TrustSection
+            img = {data.img}
+            title = {data.title}
+            text = {data.text}
+        />
+    )
+})
+
   return (
     <div className="App">
       <div className='header'>
@@ -100,6 +115,7 @@ function App() {
         </div>
         <div className='sixth-trust-section section'>
           <TrustSection/>
+            
         </div>
         <div className='seventh-trust-section section'>
           
