@@ -20,6 +20,8 @@ import TrustSection from './components/Trust';
 import TeamSection from './components/TeamSection';
 import teamData from './data/teamCardData';
 import PartnerSection from './components/PartnerSection';
+import NewsSection from './components/News';
+import dataNews from './data/newsData';
 
 
 
@@ -87,6 +89,16 @@ function App() {
     />
 
   })
+  const newsData = dataNews.map(data=> {
+    return <NewsSection
+    date = {data.date}
+    img = {data.img}
+    title = {data.title}
+    text = {data.text}
+    author = {data.author}
+    />
+
+  })
 
   return (
     <div className="App">
@@ -136,9 +148,13 @@ function App() {
         <div className='eighth-partner-section section'>
         <PartnerSection/>
         </div>
-        <div className='nineth-news-section section'></div>
+        <div className='nineth-news-section section'>
+            {newsData}
+        </div>
       </div>
-      <div className='footer'></div>
+      <div className='footer'>
+        
+      </div>
     </div>
   );
 }
