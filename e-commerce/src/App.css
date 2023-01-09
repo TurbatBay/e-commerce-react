@@ -285,6 +285,55 @@
 }
 
 
+/* TEAM CARD SECTION START HERE */
+
+
+.team-card {
+  border: 2px solid #BABABA;
+  border-radius: 20px;
+  width: 27em;
+  height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+}
+.team-card-img-text-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 76%;
+
+}
+.team-card-img-text-flex > img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border:1px dashed red ;
+  border-radius: 200px;
+  border-width: 2px;
+
+}
+.team-card-img-text-flex > h2 {
+  color: #003F62;
+  font-size: 16px;
+}
+.team-card-text{
+  background-color: #E2F4FF;
+  border-radius: 20px;
+  padding: 8px 16px 2px 16px;
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
 /* SALE SECTION STARTS HERE */
 
 /* .sale-container {
@@ -293,9 +342,6 @@
 } */
 
 
-
-
-/* slider img width */
 
 
 .promote-right > img {
