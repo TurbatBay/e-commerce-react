@@ -4,10 +4,10 @@ import React from "react";
 function NewsSection (props) {
     return(
         <div className="news-section-container">
-            <div className="news-header-texts">
+            {/* <div className="news-header-texts">
                 <h2>Latest news</h2>
                 <p>View all</p>
-            </div>
+            </div> */}
             <div className="news-card-container">
                 <div className="news-card-img">
                     <img src={props.img} alt="" />
