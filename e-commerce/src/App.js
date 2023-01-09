@@ -78,9 +78,11 @@ function App() {
 
   const teamPeopleData = teamData.map(data=> {
     return <TeamSection 
+    id = {data.id}
     img = {data.imgURL}
     title = {data.title}
     text = {data.text}
+    openSpot = {data.openSpot}
     />
 
   })
