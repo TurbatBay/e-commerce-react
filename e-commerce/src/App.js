@@ -13,9 +13,6 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import carousData from './data/carousData';
 import dropData from './data/dropData'
-import SubDropDown from './components/SubMenuDrop';
-import Swipers from './components/Swiper';
-import awardsData from './data/awards';
 import TrustSection from './components/Trust';
 import TeamSection from './components/TeamSection';
 import teamData from './data/teamCardData';
@@ -24,6 +21,7 @@ import NewsSection from './components/News';
 import dataNews from './data/newsData';
 import Footer from "./components/Footer";
 import Dropdown from "react-bootstrap/Dropdown";
+import SinglePage from './components/SinglePage';
 
 
 
@@ -31,15 +29,15 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 
 function App() {
-  const sliderData = cardData.map(data => {
-    return (
-      <SmallCard
-        img={data.imgURL}
-        title={data.title}
-        items={data.items}
-      />
-    )
-  })
+  // const sliderData = cardData.map(data => {
+  //   return (
+  //     <SmallCard
+  //       img={data.imgURL}
+  //       title={data.title}
+  //       items={data.items}
+  //     />
+  //   )
+  // })
 
   const popData = popularData.map(data => {
     const children = data.children.map(d => {
@@ -56,6 +54,28 @@ function App() {
     })
     return (
       <div className='popular-biggest-wrap'>
+        {children}
+      </div>
+    )
+  })
+
+
+  const singleData = popularData.map(data => {
+    const children = data.children.map(d => {
+      return(
+        <SinglePage
+        className={d.className}
+        imgURL={d.imgURL}
+        title={d.title}
+        price={d.price}
+        rating={d.rating}
+        stock = {d.stock}
+
+      />
+      )
+    })
+    return (
+      <div className='single-biggest-wrap'>
         {children}
       </div>
     )
@@ -79,43 +99,42 @@ function App() {
     )
   })
 
-  const awardsContentData = awardsData.map(data => {
-    return (
-      <TrustSection
-        img={data.img}
-        title={data.title}
-        text={data.text}
-      />
-    )
-  })
 
-  const teamPeopleData = teamData.map(data => {
-    const childrenss = data.children.map(f => {
-      return (
-        <TeamSection
-        id={f.id}
-        img={f.imgURL}
-        title={f.title}
-        text={f.text}
-        openSpot={f.openSpot}
-    />
-      )
-    })
-    return (
-      <div>
-        {childrenss}
-      </div>
-    )
 
-  })
+  // const teamPeopleData = teamData.map(team => {
+  //   const children = team.children.map(f => {
+  //     return (
+  //       <TeamSection
+  //       id={f.id}
+  //       img={f.imgURL}
+  //       title={f.title}
+  //       text={f.text}
+  //       openSpot={f.openSpot}
+  //   />
+  //     )
+  //   })
+  //   return (
+  //     <div>
+  //       {children}
+  //     </div>
+  //   )
+
+  // })
   const newsData = dataNews.map(data => {
-    return <NewsSection
-      date={data.date}
-      img={data.img}
-      title={data.title}
-      text={data.text}
-      author={data.author}
+    const childrenss = data.children.map(dat => {
+      return <NewsSection
+      date={dat.date}
+      img={dat.img}
+      title={dat.title}
+      text={dat.text}
+      author={dat.author}
     />
+    })
+      return (
+        <div className='news-biggest-wrap'>
+          {childrenss}
+        </div>
+      )
 
   })
 
@@ -185,11 +204,16 @@ function App() {
           <PartnerSection />
         </div>
         <div className='nineth-news-section section'>
+          <AliceCarousel>
           {newsData}
+          </AliceCarousel>
         </div>
       </div>
       <div className='footer section'>
         <Footer />
+      </div>
+      <div className='single-page-section section'>
+        {singleData}
       </div>
     </div>
   );

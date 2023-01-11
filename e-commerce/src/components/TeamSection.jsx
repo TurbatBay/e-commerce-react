@@ -8,18 +8,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 
 
 function TeamSection(props) {
-    const teamPeopleData = teamData.map(data => {
-        return <TeamSection
-          id={data.id}
-          img={data.imgURL}
-          title={data.title}
-          text={data.text}
-          openSpot={data.openSpot}
-        />
-    
-      })
-      const children = teamData.map()
-    
+
     return(
         // <SwiperSlide>
         <div className="team-card-container">
