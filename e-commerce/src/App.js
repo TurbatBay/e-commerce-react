@@ -70,6 +70,10 @@ function App() {
         price={d.price}
         rating={d.rating}
         stock = {d.stock}
+        color= {d.color}
+        category= {d.category}
+        size= {d.size}
+        sku= {d.sku}
 
       />
       )
@@ -102,7 +106,7 @@ function App() {
 
 
   const teamPeopleData = teamData.map(team => {
-    const children = team.members.map(f => {
+    const children = team.children.map(f => {
       return (
         <TeamSection
         id={f.id}
