@@ -1,7 +1,7 @@
 const teamData = [
     {
         page: 1,
-        members:[
+        children:[
             {   id: 1,
                 imgURL: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
                 title: "Esther Howard",
@@ -23,7 +23,7 @@ const teamData = [
     },
     {
         page: 2,
-        members: [
+        children: [
             {   id: 4,
                 imgURL: "https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
                 title: "Jen Padding",
@@ -46,7 +46,7 @@ const teamData = [
     },
     {
         page: 3,
-        members: [
+        children: [
             {   id: 7,
                 imgURL: "https://images.unsplash.com/photo-1541823709867-1b206113eafd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
                 title: "Zanny Lap",
