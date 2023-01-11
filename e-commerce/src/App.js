@@ -42,15 +42,22 @@ function App() {
   })
 
   const popData = popularData.map(data => {
-    return (
-      <Cart
-        className={data.className}
-        imgURL={data.imgURL}
-        title={data.title}
-        price={data.price}
-        rating={data.rating}
+    const children = data.children.map(d => {
+      return(
+        <Cart
+        className={d.className}
+        imgURL={d.imgURL}
+        title={d.title}
+        price={d.price}
+        rating={d.rating}
 
       />
+      )
+    })
+    return (
+      <div className='popular-biggest-wrap'>
+        {children}
+      </div>
     )
   })
 
@@ -83,13 +90,22 @@ function App() {
   })
 
   const teamPeopleData = teamData.map(data => {
-    return <TeamSection
-      id={data.id}
-      img={data.imgURL}
-      title={data.title}
-      text={data.text}
-      openSpot={data.openSpot}
+    const childrenss = data.children.map(f => {
+      return (
+        <TeamSection
+        id={f.id}
+        img={f.imgURL}
+        title={f.title}
+        text={f.text}
+        openSpot={f.openSpot}
     />
+      )
+    })
+    return (
+      <div>
+        {childrenss}
+      </div>
+    )
 
   })
   const newsData = dataNews.map(data => {
@@ -145,7 +161,9 @@ function App() {
           <div className='popular-product'>
             <h1>Popular Products Here</h1>
             <div className='cards'>
-              {popData}
+              <AliceCarousel>
+                {popData}
+              </AliceCarousel>
             </div>
 
 

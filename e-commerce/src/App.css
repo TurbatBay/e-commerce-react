@@ -204,25 +204,28 @@
   font-size: 27.38px;
 }
 .popular-card {
-  width: 308.83px;
-  height: 313.75px;
+  width: calc((100% / 4 - 20px ));
+  /* height: 313.75px; */
 }
-.cards {
+.popular-biggest-wrap {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 100%;
+  flex-wrap: wrap;
 }
+
 .popular-flex {
   border: 2px black solid;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.popular
-.popular-flex > div > h2 {
+
+.popular-card-p1 {
   color: #003F62;
   font-size: 17.0px;
 }
-.popular-flex > div > h3 {
+.popular-card-p2 {
   color: #4A4A4A;
   font-size: 17.0px;
 }
@@ -230,19 +233,14 @@
 .popular-flex > div {
   padding: 20px;
 }
-/* .popular-flex > img {
-  padding: 20px;
-  display: flex;;
-} */
-.popular-card-img {
-  width: 100%;
-  height: 15vw;
-  object-fit: cover;
-}
+
+
 
 .popular-card-img {
   width: 150px;
   height: 150px;
+  object-fit: cover;
+  align-self: center;
 }
 
 
