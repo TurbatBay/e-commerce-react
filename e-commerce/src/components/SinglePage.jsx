@@ -44,8 +44,8 @@ function SinglePage(props) {
                 
                 <hr />
                 <br />
-                <p>{props.color} <Circle/> <Circle/> </p>
-                <p>{props.size}</p>
+                <p>Colors: {props.color} <Circle/> <Circle/> </p>
+                <p>Size: {props.size}</p>
                 <p>Quantity</p>
                 <div>
                     <Buttons/>
@@ -54,7 +54,7 @@ function SinglePage(props) {
                 <hr />
                 <br />
                 <p>Sku: {props.sku}</p>
-                <p>{props.category}</p>
+                <p>Category: {props.category}</p>
                 <p>Share: <Facebook/> <Google/> <Whatsapp/></p>
 
             </div>
