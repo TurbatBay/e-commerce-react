@@ -39,11 +39,13 @@ function SinglePage(props) {
                     <p>No review</p>
                 </div>
                 <p>Availlability <span> <Check/> In stock </span></p>
+                {/* {props.stock === 0 && <div className="team-card-badge">SOLD OUT</div>} */}
                 <p>Hurry up! only {props.stock} product left in stock</p>
+                
                 <hr />
                 <br />
-                <p>Color <Circle/> <Circle/> </p>
-                <p>Size</p>
+                <p>{props.color} <Circle/> <Circle/> </p>
+                <p>{props.size}</p>
                 <p>Quantity</p>
                 <div>
                     <Buttons/>
@@ -51,8 +53,8 @@ function SinglePage(props) {
                 </div>
                 <hr />
                 <br />
-                <p>Sku: 01133-9-9</p>
-                <p>Category</p>
+                <p>Sku: {props.sku}</p>
+                <p>{props.category}</p>
                 <p>Share: <Facebook/> <Google/> <Whatsapp/></p>
 
             </div>
