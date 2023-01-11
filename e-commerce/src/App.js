@@ -101,25 +101,25 @@ function App() {
 
 
 
-  // const teamPeopleData = teamData.map(team => {
-  //   const children = team.children.map(f => {
-  //     return (
-  //       <TeamSection
-  //       id={f.id}
-  //       img={f.imgURL}
-  //       title={f.title}
-  //       text={f.text}
-  //       openSpot={f.openSpot}
-  //   />
-  //     )
-  //   })
-  //   return (
-  //     <div>
-  //       {children}
-  //     </div>
-  //   )
+  const teamPeopleData = teamData.map(team => {
+    const children = team.members.map(f => {
+      return (
+        <TeamSection
+        id={f.id}
+        img={f.imgURL}
+        title={f.title}
+        text={f.text}
+        openSpot={f.openSpot}
+    />
+      )
+    })
+    return (
+      <div className='team-biggest-wrap'>
+        {children}
+      </div>
+    )
 
-  // })
+  })
   const newsData = dataNews.map(data => {
     const childrenss = data.children.map(dat => {
       return <NewsSection
@@ -198,7 +198,9 @@ function App() {
           <TrustSection />
         </div>
         <div className='seventh-team-section section'>
-          {/* {teamPeopleData} */}
+          <AliceCarousel>
+          {teamPeopleData}
+          </AliceCarousel>
         </div>
         <div className='eighth-partner-section section'>
           <PartnerSection />

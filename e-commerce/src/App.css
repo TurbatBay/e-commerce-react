@@ -286,7 +286,11 @@
 
 /* TEAM CARD SECTION START HERE */
 
+.team-biggest-wrap {
+  display: flex;
+  justify-content: space-between;
 
+}
 .team-card {
   border: 2px solid #BABABA;
   border-radius: 20px;
