@@ -8,19 +8,7 @@ function SubMenu(props) {
     
   return (
     <div className="submenu-container">
-      <div className="submenu-first-dropdown">
-        <Dropdown>
-          <Dropdown.Toggle variant="warning" id="dropdown-basic">
-            Browse Categories
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </div>
+      
 
       <div className="submenu-middle-dropdown">
         <Nav>
@@ -42,7 +30,7 @@ function SubMenu(props) {
           </Nav>
       </div>
 
-      <div className="submenu-text">30 Days Free Return</div>
+      
     </div>
   );
 }

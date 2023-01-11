@@ -43,7 +43,7 @@ function Swipers() {
 
     //     </SwiperSlide>
     // ))}
-      
+
   return (
     <Swiper
       // install Swiper modules

@@ -23,6 +23,7 @@ import PartnerSection from './components/PartnerSection';
 import NewsSection from './components/News';
 import dataNews from './data/newsData';
 import Footer from "./components/Footer";
+import Dropdown from "react-bootstrap/Dropdown";
 
 
 
@@ -33,21 +34,21 @@ function App() {
   const sliderData = cardData.map(data => {
     return (
       <SmallCard
-        img = {data.imgURL}
-        title = {data.title}
-        items = {data.items}
+        img={data.imgURL}
+        title={data.title}
+        items={data.items}
       />
     )
   })
 
   const popData = popularData.map(data => {
-    return(
-      <Cart 
-      className= {data.className}
-      imgURL = {data.imgURL}
-      title = {data.title}
-      price = {data.price}
-      rating = {data.rating}
+    return (
+      <Cart
+        className={data.className}
+        imgURL={data.imgURL}
+        title={data.title}
+        price={data.price}
+        rating={data.rating}
 
       />
     )
@@ -56,8 +57,8 @@ function App() {
   const carouselData = carousData.map(data => {
     return (
       <Promote
-        img = {data.img}
-        title = {data.title}
+        img={data.img}
+        title={data.title}
       />
     )
   })
@@ -65,38 +66,39 @@ function App() {
   const dropDownData = dropData.map(data => {
     return (
       <SubMenu
-        title = {data.title}
-        />
+        title={data.title}
+      />
+
     )
   })
 
   const awardsContentData = awardsData.map(data => {
-    return(
-        <TrustSection
-            img = {data.img}
-            title = {data.title}
-            text = {data.text}
-        />
+    return (
+      <TrustSection
+        img={data.img}
+        title={data.title}
+        text={data.text}
+      />
     )
-})
+  })
 
-  const teamPeopleData = teamData.map(data=> {
-    return <TeamSection 
-    id = {data.id}
-    img = {data.imgURL}
-    title = {data.title}
-    text = {data.text}
-    openSpot = {data.openSpot}
+  const teamPeopleData = teamData.map(data => {
+    return <TeamSection
+      id={data.id}
+      img={data.imgURL}
+      title={data.title}
+      text={data.text}
+      openSpot={data.openSpot}
     />
 
   })
-  const newsData = dataNews.map(data=> {
+  const newsData = dataNews.map(data => {
     return <NewsSection
-    date = {data.date}
-    img = {data.img}
-    title = {data.title}
-    text = {data.text}
-    author = {data.author}
+      date={data.date}
+      img={data.img}
+      title={data.title}
+      text={data.text}
+      author={data.author}
     />
 
   })
@@ -106,11 +108,26 @@ function App() {
       <div className='header'>
         <div className='help'><Help /></div>
         <div className='navbar'><NavBar /></div>
-        <div className='submenu'>
-            {dropDownData}
-          </div>
+        <div className='submenu d-flex'>
 
-        
+          <div className="submenu-first-dropdown">
+            <Dropdown>
+              <Dropdown.Toggle variant="warning" id="dropdown-basic">
+                Browse Categories
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+          {dropDownData}
+          <div className="submenu-text">30 Days Free Return</div>
+        </div>
+
+
       </div>
       <div className='main'>
         <div className='first-promote-section section'>
@@ -121,18 +138,18 @@ function App() {
 
         <div className='second-slider-section section'>
           <div className='smallCard'>
-          <Swipers></Swipers>
+            {/* <Swipers></Swipers> */}
           </div>
         </div>
         <div className='third-popular-section section'>
-        <div className='popular-product'>
-          <h1>Popular Products Here</h1>
-          <div className='cards'>
-            {popData}
+          <div className='popular-product'>
+            <h1>Popular Products Here</h1>
+            <div className='cards'>
+              {popData}
+            </div>
+
+
           </div>
-          
-    
-        </div>
         </div>
         <div className='fourth-sale-section section'>
           <Sale />
@@ -141,20 +158,20 @@ function App() {
           <h1>Add to Cart section here</h1>
         </div>
         <div className='sixth-trust-section section'>
-          <TrustSection/>
+          <TrustSection />
         </div>
         <div className='seventh-team-section section'>
-          {teamPeopleData}
+          {/* {teamPeopleData} */}
         </div>
         <div className='eighth-partner-section section'>
-        <PartnerSection/>
+          <PartnerSection />
         </div>
         <div className='nineth-news-section section'>
-            {newsData}
+          {newsData}
         </div>
       </div>
       <div className='footer section'>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

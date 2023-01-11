@@ -213,13 +213,11 @@
   gap: 10px;
   width: 100%;
 }
-
-
 .popular-flex {
   border: 2px black solid;
   border-radius: 20px;
 }
-
+.popular
 .popular-flex > div > h2 {
   color: #003F62;
   font-size: 17.0px;
@@ -242,6 +240,10 @@
   object-fit: cover;
 }
 
+.popular-card-img {
+  width: 150px;
+  height: 150px;
+}
 
 
 
