@@ -483,7 +483,7 @@
 }
 .single-top-image img {
   padding: 40px;
-  width: 37rem;
+  width: 90%;
 }
 .single-bottom-first {
   border: 1px solid grey;
@@ -512,4 +512,47 @@
 .single-right {
   width: 48%;
 }
+
+.single-right-title {
+  font-size: 1.8rem;
+  color: #003F62;
+
+}
+.single-right-price {
+  font-size: 1.8rem;
+  color: #4A4A4A;
+  
+}
+.single-right-review {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  align-items: flex-end;
+}
+.single-right-review-text {
+  font-size: 0.8rem;
+  color: #4A4A4A;
+}
+
+.single-right-available-p {
+  font-size: 1.1rem;
+  color: #232323;
+}
+.single-right-available-span {
+  font-size: 1.1rem;
+  color: #30BD57;
+}
+.single-right-hurry-p {
+  font-size: 1rem;
+  color: #5D5D5D;
+}
+
+.single-right-h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  
+}
+
 
