@@ -10,6 +10,8 @@ import SubMenu from './SubMenu';
 import IconCount from "./images/icon-count.png";
 
 function NavBar() {
+
+
   return (
     <Navbar  expand="xxl" className='m-auto navbar-container'>
       <Container fluid >
@@ -43,7 +45,10 @@ function NavBar() {
               <a href='#'>Sign in</a>
             </div>
             <div className='navbar-heart-icon'>
-              <a href='#'><Heart color="white" size="20px" /> </a>
+              <a href='#' >
+                <Heart color="white" size="20px" /> 
+
+                </a>
               <img src={IconCount}  width = "15px" />
             </div>
             <div className='navbar-market-icon'>
