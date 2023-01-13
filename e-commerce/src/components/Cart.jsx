@@ -4,6 +4,7 @@ import MyImage from './images/iwatch.png';
 import ReactStars from "react-rating-stars-component";
 import React from "react";
 import { render } from "react-dom";
+import SinglePage from './SinglePage';
 
 function Cart(props) {
   const ratingChanged = (newRating) => {
@@ -11,7 +12,7 @@ function Cart(props) {
   };
   return (
     <div className='popular-card'>
-      <div className="popular-flex">
+      <a href='./SinglePage.jsx' className="popular-flex">
           <img src={props.imgURL} className="popular-card-img"  alt='image'/>
           <div>
               <p className='popular-card-p1'>{props.title}</p>
@@ -30,7 +31,7 @@ function Cart(props) {
               />
 
           </div>
-      </div>
+      </a>
     </div>
 
   );
