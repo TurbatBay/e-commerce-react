@@ -196,7 +196,7 @@ function App() {
           <Sale />
         </div>
         <div className='fifth-add-to-cart-section section'>
-          <h1>Add to Cart section here</h1>
+          <h1>Add to Cart section here but</h1>
         </div>
         <div className='sixth-trust-section section'>
           <TrustSection />
