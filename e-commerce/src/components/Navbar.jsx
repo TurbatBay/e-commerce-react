@@ -8,9 +8,20 @@ import Logo from "./images/electon-logo.png";
 import { Person, Heart, CartCheck } from 'react-bootstrap-icons';
 import SubMenu from './SubMenu';
 import IconCount from "./images/icon-count.png";
+import { Dropdown } from 'react-bootstrap';
+import Help from './Help';
+import dropData from '../data/dropData';
 
 function NavBar() {
+  const dropDownData = dropData.map((data) => {
+    return <SubMenu title={data.title} />;
+  });
+
   return (
+    <>
+    <div className="help">
+          <Help />
+    </div>
     <Navbar  expand="xxl" className='m-auto navbar-container'>
       <Container fluid >
         <Navbar.Brand href="#" className='navbar-3-flex'>
@@ -54,54 +65,27 @@ function NavBar() {
       </Container>
     </Navbar>
 
-  );
+        <div className="submenu d-flex">
+          <div className="submenu-first-dropdown">
+            <Dropdown>
+              <Dropdown.Toggle variant="warning" id="dropdown-basic">
+                Browse Categories
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+          {dropDownData}
+          <div className="submenu-text">30 Days Free Return</div>
+        </div>
+    </>
+    );
 }
 
 export default NavBar;
 
 
-
-// <Nav
-//             className="me-auto my-2 my-lg-0"
-//             style={{ maxHeight: '100px' }}
-//             navbarScroll
-            
-//           >
-//             <NavDropdown title="Home" id="navbarScrollingDropdown">
-//               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-//               <NavDropdown.Item href="#action4">
-//                 Another action
-//               </NavDropdown.Item>
-//               <NavDropdown.Divider />
-//               <NavDropdown.Item href="#action5">
-//                 Something else here
-//               </NavDropdown.Item>
-//             </NavDropdown>
-            
-//             <NavDropdown title="Catalog" id="navbarScrollingDropdown">
-//               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-//               <NavDropdown.Item href="#action4">
-//                 Another action
-//               </NavDropdown.Item>
-//               <NavDropdown.Divider />
-//               <NavDropdown.Item href="#action5">
-//                 Something else here
-//               </NavDropdown.Item>
-//             </NavDropdown>
-
-//             <Nav.Link style={{ color: 'white' }}  href="#action1">Home</Nav.Link>
-
-//             <NavDropdown title="Pages" id="navbarScrollingDropdown" >
-//               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-//               <NavDropdown.Item href="#action4">
-//                 Another action
-//               </NavDropdown.Item>
-//               <NavDropdown.Divider />
-//               <NavDropdown.Item href="#action5">
-//                 Something else here
-//               </NavDropdown.Item>
-//             </NavDropdown>
-
-//             <Nav.Link style={{ color: 'white' }} href="#action1">About us</Nav.Link>
-
-//           </Nav>
