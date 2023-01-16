@@ -18,6 +18,12 @@
 
 
 /* HELP SECTION */
+
+.help{
+  width: 100%;
+}
+
+
 .help-container {
   display: flex;
   align-items: center;
@@ -49,6 +55,7 @@
   width: 46%;
 
 }
+
 
 
 
