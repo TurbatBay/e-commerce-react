@@ -1,17 +1,24 @@
 import Card from 'react-bootstrap/Card';
-import { Star } from 'react-bootstrap-icons';
+import { Heart, Star } from 'react-bootstrap-icons';
 import MyImage from './images/iwatch.png';
 import ReactStars from "react-rating-stars-component";
-import React from "react";
+import React, { useState } from "react";
 import { render } from "react-dom";
 
 function Cart(props) {
+
+  const [wish, setWish] = useState(false);
+  function handleClick() {
+    console.log("Add to Wishlist!");}
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
+  
   return (
     <div className='popular-card'>
       <div className="popular-flex">
+          <div className='popular-heart-container'><Heart className='popular-heart-icon ' onClick={handleClick}></Heart></div>
+          
           <img src={props.imgURL} className="popular-card-img"  alt='image'/>
           <div>
               <p className='popular-card-p1'>{props.title}</p>

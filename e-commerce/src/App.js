@@ -29,15 +29,7 @@ import SinglePage from './components/SinglePage';
 
 
 function App() {
-  // const sliderData = cardData.map(data => {
-  //   return (
-  //     <SmallCard
-  //       img={data.imgURL}
-  //       title={data.title}
-  //       items={data.items}
-  //     />
-  //   )
-  // })
+
 
   const popData = popularData.map(data => {
     const children = data.children.map(d => {
@@ -104,7 +96,6 @@ function App() {
   })
 
 
-
   const teamPeopleData = teamData.map(team => {
     const children = team.children.map(f => {
       return (
@@ -124,6 +115,8 @@ function App() {
     )
 
   })
+
+
   const newsData = dataNews.map(data => {
     const childrenss = data.children.map(dat => {
       return <NewsSection
@@ -165,8 +158,6 @@ function App() {
           {dropDownData}
           <div className="submenu-text">30 Days Free Return</div>
         </div>
-
-
       </div>
       <div className='main'>
         <div className='first-promote-section section'>
