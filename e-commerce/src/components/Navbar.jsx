@@ -11,6 +11,7 @@ import IconCount from "./images/icon-count.png";
 import { Dropdown } from 'react-bootstrap';
 import Help from './Help';
 import dropData from '../data/dropData';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   const dropDownData = dropData.map((data) => {
@@ -25,7 +26,7 @@ function NavBar() {
     <Navbar  expand="xxl" className='m-auto navbar-container'>
       <Container fluid >
         <Navbar.Brand href="#" className='navbar-3-flex'>
-          <img src={Logo} alt='logo'/>
+          <Link to="./"><img src={Logo} alt='logo'/></Link>
         </Navbar.Brand>
 
 
@@ -51,7 +52,7 @@ function NavBar() {
             <div className='navbar-sign-in'>
               <a href='#'><Person color="white" size="30px"/> </a>
               
-              <a href='#'>Sign in</a>
+              <Link to="./register">Sign in</Link>
             </div>
             <div className='navbar-heart-icon'>
               <a href='#'><Heart color="white" size="20px" /> </a>

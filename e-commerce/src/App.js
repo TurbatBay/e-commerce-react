@@ -19,9 +19,9 @@ function App() {
   return (
     
     <div className="App">
-      <div className="navbar">
+      {/* <div className="navbar">
         <NavBar />
-      </div>
+      </div> */}
 
       {/* <MainMenu />  */}
 
@@ -29,15 +29,14 @@ function App() {
         <Link to="./about">About</Link>
         <Link to="./login">login</Link>
         <Link to="./register">register</Link>
-        <Link to="./form">Form</Link>
         <Link to="./">home</Link>
       </div>
       <Routes>
         
 
         <Route path="/login" element={<Login />} />
+        <Route path="/login/register" element={<Register />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/form" element={<Form />} />
         <Route path="/" element={<Home />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
