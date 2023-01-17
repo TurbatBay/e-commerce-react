@@ -4,6 +4,7 @@ import MyImage from './images/iwatch.png';
 import ReactStars from "react-rating-stars-component";
 import React from "react";
 import { render } from "react-dom";
+import { Link } from 'react-router-dom';
 
 function Cart(props) {
   const ratingChanged = (newRating) => {

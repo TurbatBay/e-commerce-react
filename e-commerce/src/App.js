@@ -14,6 +14,7 @@ import Register from "./pages/Register"
 import Form from "./pages/Form"
 import NotFound from "./pages/NotFound"
 import About from "./About";
+import SinglePage from "./components/SinglePage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Link to="./login">login</Link>
         <Link to="./register">register</Link>
         <Link to="./">home</Link>
+        <Link to="./detail">detail</Link>
       </div>
       <Routes>
         
@@ -39,6 +41,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route path="/*" element={<NotFound />} />
+        <Route path="/detail" element={<SinglePage />} />
       </Routes>
       {/* <div className="footer section">
         <Footer />
