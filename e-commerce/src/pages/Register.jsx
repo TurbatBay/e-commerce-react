@@ -1,11 +1,11 @@
 import React from 'react'
 import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
-
+import { Link } from 'react-router-dom';
 export default function Register() {
   return (
     <div>
       <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+        <Row className="vh-90 d-flex justify-content-center align-items-center">
           <Col md={8} lg={6} xs={12}>
           <div className="border border-2 border-primary"></div>
             <Card className="shadow px-4">
@@ -68,6 +68,11 @@ export default function Register() {
           </Col>
         </Row>
       </Container>
+      <div className='register-back-link'>
+
+      <Link to={"/"}>Back</Link>
+
+      </div>
     </div>
   )
 }

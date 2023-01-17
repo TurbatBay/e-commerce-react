@@ -15,6 +15,7 @@ import teamData from "../data/teamCardData";
 import NewsSection from "./News";
 import dataNews from "../data/newsData";
 import SinglePage from "./SinglePage";
+import { Link } from "react-router-dom";
 function MainMenu() {
     const popData = popularData.map((data) => {
         const children = data.children.map((d) => {
@@ -28,7 +29,7 @@ function MainMenu() {
             />
           );
         });
-        return <div className="popular-biggest-wrap">{children}</div>;
+        return <Link to="./detail"><div className="popular-biggest-wrap">{children}</div></Link>;
       });
     
       const singleData = popularData.map((data) => {
@@ -97,7 +98,8 @@ function MainMenu() {
         <div className="popular-product">
           <h1>Popular Products Here</h1>
           <div className="cards">
-            <AliceCarousel>{popData}</AliceCarousel>
+          <AliceCarousel>{popData}</AliceCarousel>
+            
           </div>
         </div>
       </div>
