@@ -18,7 +18,7 @@ const cardData = [
       },
       {
         id: "3",
-        imgURL: "./images/iwatch.png",
+        imgURL: "https://purepng.com/public/uploads/large/apple-watch-pcq.png",
         title: "iwatch",
         items: "11 items",
       },
@@ -69,7 +69,7 @@ const cardData = [
       },
       {
         id: "9",
-        imgURL: "./images/iwatch.png",
+        imgURL: "https://purepng.com/public/uploads/large/apple-watch-pcq.png",
         title: "iwatch",
         items: "11 items",
       },
