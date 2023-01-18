@@ -17,74 +17,74 @@ import dataNews from "../data/newsData";
 import SinglePage from "./SinglePage";
 import { Link } from "react-router-dom";
 function MainMenu() {
-    const popData = popularData.map((data) => {
-        const children = data.children.map((d) => {
-          return (
-            <Cart
-              className={d.className}
-              imgURL={d.imgURL}
-              title={d.title}
-              price={d.price}
-              rating={d.rating}
-            />
-          );
-        });
-        return <div className="popular-biggest-wrap">{children}</div>
-      });
-    
-      const singleData = popularData.map((data) => {
-        const children = data.children.map((d) => {
-          return (
-            <SinglePage
-              className={d.className}
-              imgURL={d.imgURL}
-              title={d.title}
-              price={d.price}
-              rating={d.rating}
-              stock={d.stock}
-              color={d.color}
-              category={d.category}
-              size={d.size}
-              sku={d.sku}
-            />
-          );
-        });
-        return <div className="single-biggest-wrap">{children}</div>;
-      });
-    
-      const carouselData = carousData.map((data) => {
-        return <Promote img={data.img} title={data.title} />;
-      });
-    
-    
-      const teamPeopleData = teamData.map((team) => {
-        const children = team.children.map((f) => {
-          return (
-            <TeamSection
-              id={f.id}
-              img={f.imgURL}
-              title={f.title}
-              text={f.text}
-              openSpot={f.openSpot}
-            />
-          );
-        });
-        return <div className="team-biggest-wrap">{children}</div>;
-      });
-      const newsData = dataNews.map((data) => {
-        const childrenss = data.children.map((dat) => {
-          return (
-            <NewsSection
-              date={dat.date}
-              img={dat.img}
-              title={dat.title}
-              text={dat.text}
-              author={dat.author}
-            />
-          );
-        });
-        return <div className="news-biggest-wrap">{childrenss}</div>;
-      });
+  const popData = popularData.map((data) => {
+    const children = data.children.map((d) => {
+      return (
+        <Cart
+          className={d.className}
+          imgURL={d.imgURL}
+          title={d.title}
+          price={d.price}
+          rating={d.rating}
+          id={d.id}
+        />
+      );
+    });
+    return <div className="popular-biggest-wrap">{children}</div>;
+  });
+
+  const singleData = popularData.map((data) => {
+    const children = data.children.map((d) => {
+      return (
+        <SinglePage
+          className={d.className}
+          imgURL={d.imgURL}
+          title={d.title}
+          price={d.price}
+          rating={d.rating}
+          stock={d.stock}
+          color={d.color}
+          category={d.category}
+          size={d.size}
+          sku={d.sku}
+        />
+      );
+    });
+    return <div className="single-biggest-wrap">{children}</div>;
+  });
+
+  const carouselData = carousData.map((data) => {
+    return <Promote img={data.img} title={data.title} />;
+  });
+
+  const teamPeopleData = teamData.map((team) => {
+    const children = team.children.map((f) => {
+      return (
+        <TeamSection
+          id={f.id}
+          img={f.imgURL}
+          title={f.title}
+          text={f.text}
+          openSpot={f.openSpot}
+        />
+      );
+    });
+    return <div className="team-biggest-wrap">{children}</div>;
+  });
+  const newsData = dataNews.map((data) => {
+    const childrenss = data.children.map((dat) => {
+      return (
+        <NewsSection
+          date={dat.date}
+          img={dat.img}
+          title={dat.title}
+          text={dat.text}
+          author={dat.author}
+        />
+      );
+    });
+    return <div className="news-biggest-wrap">{childrenss}</div>;
+  });
   return (
     <div className="main">
       <div className="first-promote-section section">
@@ -98,8 +98,7 @@ function MainMenu() {
         <div className="popular-product">
           <h1>Popular Products Here</h1>
           <div className="cards">
-          <AliceCarousel>{popData}</AliceCarousel>
-            
+            <AliceCarousel>{popData}</AliceCarousel>
           </div>
         </div>
       </div>

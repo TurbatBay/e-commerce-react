@@ -3,26 +3,26 @@ import NavBar from "./components/Navbar";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Footer from "./components/Footer";
 import MainMenu from "./components/MainMenu";
-import { Route, Routes , Link} from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import SignIn from "./SignIn";
 import Signup from "./SignUp";
 // import BookList from "./pages/BookList";
 // import Books from "./pages/Books";
 import Home from "./pages/Home";
-import Login from "./pages/Login"
-import Register from "./pages/Register"
-import Form from "./pages/Form"
-import NotFound from "./pages/NotFound"
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Form from "./pages/Form";
+import NotFound from "./pages/NotFound";
 import About from "./About";
 import SinglePage from "./components/SinglePage";
+import Header from "./components/Header";
 
 function App() {
   return (
-    
     <div className="App">
-      {/* <div className="navbar">
+      <div className="navbar">
         <NavBar />
-      </div> */}
+      </div>
 
       {/* <MainMenu />  */}
 
@@ -34,14 +34,12 @@ function App() {
         <Link to="./detail">detail</Link>
       </div>
       <Routes>
-        
-
         <Route path="/login" element={<Login />} />
         <Route path="/login/register" element={<Register />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route path="/*" element={<NotFound />} />
-        <Route path="/detail" element={<SinglePage />} />
+        <Route path="/detail/:id" element={<SinglePage />} />
       </Routes>
       {/* <div className="footer section">
         <Footer />
@@ -53,10 +51,10 @@ function App() {
 export default App;
 
 {
-     <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/signIn" element={<SignIn />} />
-      </Routes> 
+  <Routes>
+    <Route path="/about" element={<About />} />
+    <Route path="/signIn" element={<SignIn />} />
+  </Routes>;
 }
 
 {
@@ -64,7 +62,4 @@ export default App;
 }
 
 {
-  
 }
-
-
