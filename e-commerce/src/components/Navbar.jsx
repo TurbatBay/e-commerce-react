@@ -35,7 +35,6 @@ function NavBar() {
               <Form.Control
                 type="search"
                 placeholder="Search any thing"
-                className="me-2"
                 aria-label="Search"
               />
               <Button variant="warning">Search</Button>
