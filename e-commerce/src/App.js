@@ -9,11 +9,9 @@ import { Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Form from "./pages/Form";
 import NotFound from "./pages/NotFound";
 import About from "./About";
 import SinglePage from "./components/SinglePage";
-import Header from "./components/Header";
 
 function App() {
   return (

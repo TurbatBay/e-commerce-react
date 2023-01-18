@@ -48,7 +48,7 @@ function NavBar() {
                 <Person color="white" size="30px" />{" "}
               </a>
 
-              <Link to="./register">Sign in</Link>
+              <Link to="./login">Sign in</Link>
             </div>
             <div className="navbar-heart-icon">
               <a href="#">

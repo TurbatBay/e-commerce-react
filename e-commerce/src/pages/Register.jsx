@@ -21,14 +21,30 @@ export default function Register() {
     <div className="register-form-container">
       <form onSubmit={onSubmit} className="register-form-flex">
         <label htmlFor="email">Email:</label>
-        <input name="email" type="email" /> <br />
+        <input className="register-form-input" name="email" type="email" />{" "}
+        <br />
         <label htmlFor="username">UserName:</label>
-        <input name="username" type="text" /> <br />
+        <input
+          className="register-form-input"
+          name="username"
+          type="text"
+        />{" "}
+        <br />
         <label htmlFor="username">Phone Number:</label>
-        <input name="phonenumber" type="number" /> <br />
+        <input
+          className="register-form-input"
+          name="phonenumber"
+          type="number"
+        />{" "}
+        <br />
         <label htmlFor="password">Password: </label>
-        <input name="password" type="password" /> <br />
-        <button>Sign in</button>
+        <input
+          className="register-form-input"
+          name="password"
+          type="password"
+        />{" "}
+        <br />
+        <button className="register-form-button">Sign in</button>
       </form>
       <ToastContainer />
     </div>
