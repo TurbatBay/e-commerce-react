@@ -31,10 +31,16 @@ export default function Login() {
     <div className="login-container">
       <form onSubmit={onSubmit} className="login-form-flex">
         <label htmlFor="username">Login Name:</label>
-        <input name="username" type="email" /> <br />
+        <input className="login-form-input" name="username" type="email" />{" "}
+        <br />
         <label htmlFor="password">Password: </label>
-        <input name="password" type="password" /> <br />
-        <button>Sign in</button>
+        <input
+          className="login-form-input"
+          name="password"
+          type="password"
+        />{" "}
+        <br />
+        <button className="login-form-button">Login</button>
       </form>
       <ToastContainer />
     </div>
