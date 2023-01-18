@@ -28,8 +28,8 @@ export default function Login() {
     }
   };
   return (
-    <div>
-      <form onSubmit={onSubmit}>
+    <div className="login-container">
+      <form onSubmit={onSubmit} className="login-form-flex">
         <label htmlFor="username">Login Name:</label>
         <input name="username" type="email" /> <br />
         <label htmlFor="password">Password: </label>

@@ -15,7 +15,6 @@ import teamData from "../data/teamCardData";
 import NewsSection from "./News";
 import dataNews from "../data/newsData";
 import SinglePage from "./SinglePage";
-import { Link } from "react-router-dom";
 function MainMenu() {
   const popData = popularData.map((data) => {
     const children = data.children.map((d) => {
@@ -27,6 +26,7 @@ function MainMenu() {
           price={d.price}
           rating={d.rating}
           id={d.id}
+          isWishlisted={d.isWishlisted}
         />
       );
     });

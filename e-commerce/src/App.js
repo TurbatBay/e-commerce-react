@@ -4,8 +4,6 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import Footer from "./components/Footer";
 import MainMenu from "./components/MainMenu";
 import { Route, Routes, Link } from "react-router-dom";
-import SignIn from "./SignIn";
-import Signup from "./SignUp";
 // import BookList from "./pages/BookList";
 // import Books from "./pages/Books";
 import Home from "./pages/Home";
@@ -26,13 +24,6 @@ function App() {
 
       {/* <MainMenu />  */}
 
-      <div className="navbar">
-        <Link to="./about">About</Link>
-        <Link to="./login">login</Link>
-        <Link to="./register">register</Link>
-        <Link to="./">home</Link>
-        <Link to="./detail">detail</Link>
-      </div>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/login/register" element={<Register />} />
@@ -53,7 +44,6 @@ export default App;
 {
   <Routes>
     <Route path="/about" element={<About />} />
-    <Route path="/signIn" element={<SignIn />} />
   </Routes>;
 }
 

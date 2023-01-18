@@ -34,10 +34,6 @@ function SinglePage(props) {
   };
   return (
     <>
-      <div className="navbar">
-        <NavBar />
-      </div>
-
       <div className="single-page-container">
         <div className="single-left">
           <div className="single-top-image">
