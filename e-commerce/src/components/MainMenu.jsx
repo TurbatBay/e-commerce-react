@@ -29,7 +29,7 @@ function MainMenu() {
             />
           );
         });
-        return <Link to="./detail"><div className="popular-biggest-wrap">{children}</div></Link>;
+        return <div className="popular-biggest-wrap">{children}</div>
       });
     
       const singleData = popularData.map((data) => {

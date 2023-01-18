@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-import { Star } from 'react-bootstrap-icons';
+import { Heart, HeartFill, Star } from 'react-bootstrap-icons';
 import MyImage from './images/iwatch.png';
 import ReactStars from "react-rating-stars-component";
 import React from "react";
@@ -7,6 +7,14 @@ import { render } from "react-dom";
 import { Link } from 'react-router-dom';
 
 function Cart(props) {
+
+
+  let Icon = props.isWishlisted ? "heart-regular.svg" : "heart-solid.svg"
+
+  function toggleWishlist() {
+    console.log("Toggle Wishlist")
+    
+  }
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
@@ -17,6 +25,12 @@ function Cart(props) {
           <div>
               <p className='popular-card-p1'>{props.title}</p>
               <p className='popular-card-p2'>{props.price}</p>
+              <div>
+                <img 
+                src={`./images/images/${Icon}`} width="50px"
+                onClick={toggleWishlist}
+                />
+              </div>
 
               
               <ReactStars

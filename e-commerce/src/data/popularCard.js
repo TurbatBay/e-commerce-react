@@ -12,7 +12,8 @@ const popularData = [
                 color: ["blue ","red "],
                 category: ["20 off ", "49% off ", "Turu remote "],
                 size: [30, 45, 56, 42],
-                sku: "11223-5-1"
+                sku: "11223-5-1",
+                isWishlisted: true
             },
             {
                 className:"Card",
@@ -24,7 +25,8 @@ const popularData = [
                 color: ["blue ","red "],
                 category: ["20 off ", "49% off ", "Turu remote "],
                 size: [30, 45, 56, 42],
-                sku: '00120-5-10000'
+                sku: '00120-5-10000',
+                isWishlisted: false
             },
             {   
                 className:"Card",
@@ -36,7 +38,8 @@ const popularData = [
                 color: ["blue ","red "],
                 category: ["20 off ", "49% off ", "Turu remote "],
                 size: [30, 45, 56, 42],
-                sku: "0003-51200002-10000"
+                sku: "0003-51200002-10000",
+                isWishlisted: false
             },
             {
                 className:"Card",
@@ -48,7 +51,8 @@ const popularData = [
                 color: ["blue ","red "],
                 category: ["20 off ", "49% off ", "Turu remote "],
                 size: [30, 45, 56, 42],
-                sku: "11212312323-5-1"
+                sku: "11212312323-5-1",
+                isWishlisted: true
             },
             {
                 className:"Card",
@@ -60,7 +64,8 @@ const popularData = [
                 color: ["blue ","red "],
                 category: ["20 off ", "49% off ", "Turu remote "],
                 size: [30, 45, 56, 42],
-                sku: "11223-1235-112"
+                sku: "11223-1235-112",
+                isWishlisted: false
             },
             {   
                 className:"Card",
