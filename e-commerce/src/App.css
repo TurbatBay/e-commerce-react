@@ -102,9 +102,11 @@
 
 /* SMALL CARD */
 
-.small-card-container {
-  gap: 100px;
+.small-card-biggest-wrap {
   display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .small-card-inside-flex {

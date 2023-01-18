@@ -1,8 +1,6 @@
 import "./App.css";
 import NavBar from "./components/Navbar";
 import "react-alice-carousel/lib/alice-carousel.css";
-import Footer from "./components/Footer";
-import MainMenu from "./components/MainMenu";
 import { Route, Routes, Link } from "react-router-dom";
 // import BookList from "./pages/BookList";
 // import Books from "./pages/Books";
@@ -12,6 +10,7 @@ import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import About from "./About";
 import SinglePage from "./components/SinglePage";
+import ToasterPage from "./pages/ToasterPage";
 
 function App() {
   return (
@@ -29,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/*" element={<NotFound />} />
         <Route path="/detail/:id" element={<SinglePage />} />
+        <Route path="/toaster" element={<ToasterPage />} />
       </Routes>
       {/* <div className="footer section">
         <Footer />
