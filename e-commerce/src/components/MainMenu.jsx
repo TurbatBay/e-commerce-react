@@ -15,6 +15,9 @@ import teamData from "../data/teamCardData";
 import NewsSection from "./News";
 import dataNews from "../data/newsData";
 import SinglePage from "./SinglePage";
+import { Link } from "react-router-dom";
+import SmallCard from "./SmallCard";
+import cardData from "../data/card";
 function MainMenu() {
   const popData = popularData.map((data) => {
     const children = data.children.map((d) => {
@@ -57,6 +60,20 @@ function MainMenu() {
     return <Promote img={data.img} title={data.title} />;
   });
 
+  const smallCardData = cardData.map((dat) => {
+    const children = dat.children.map((data) => {
+      return (
+        <SmallCard
+          id={data.id}
+          img={data.imgURL}
+          title={data.title}
+          items={data.items}
+        />
+      );
+    });
+    return <div className="small-card-biggest-wrap">{children}</div>;
+  });
+
   const teamPeopleData = teamData.map((team) => {
     const children = team.children.map((f) => {
       return (
@@ -92,7 +109,9 @@ function MainMenu() {
       </div>
 
       <div className="second-slider-section section">
-        <div className="smallCard">{/* <Swipers></Swipers> */}</div>
+        <div className="smallCard">
+          <AliceCarousel>{smallCardData}</AliceCarousel>
+        </div>
       </div>
       <div className="third-popular-section section">
         <div className="popular-product">
@@ -106,7 +125,9 @@ function MainMenu() {
         <Sale />
       </div>
       <div className="fifth-add-to-cart-section section">
-        <h1>Add to Cart section here CHECKING NEW BRANCH</h1>
+        <Link className="link" to={"/toaster"}>
+          Toaster Page
+        </Link>
       </div>
       <div className="sixth-trust-section section">
         <TrustSection />

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const navigate = useNavigate();
   const [user, setUser] = useState({
     loginName: "khangailhuu@gmail.com",
-    password: "12355666",
+    password: "123",
   });
 
   const onSubmit = (e) => {
@@ -18,13 +18,15 @@ export default function Login() {
       user.password === e.target.password.value
     ) {
       toast("User is permitted");
+      console.log("user permitted");
       navigate("/", { replace: true, state: { bookName: "Fake Title" } }); //ene n login hiisnii daraa shuud home page ruu orno
     } else {
       toast("User is not permitted");
+      console.log("user not permitted");
       navigate("/register", {
         replace: true,
         state: { bookName: "Fake Title" },
-      });
+      }); //its working but shuud navigate n ajillaad bn toast n ajillahgui harin navigate iig n awaad haychwal User Permitted gj garch irj bn
     }
   };
   return (
