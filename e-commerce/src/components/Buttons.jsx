@@ -1,12 +1,11 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-
+import React from "react";
+import Button from "react-bootstrap/Button";
 
 function Buttons(props) {
-    return(
-        <>
-        <style type="text/css">
-            {`
+  return (
+    <>
+      <style type="text/css">
+        {`
             .btn-shop {
             background-color: #EDA415;
             color: white;
@@ -34,11 +33,14 @@ function Buttons(props) {
             `}
       </style>
 
-        <Button className='btn-shop' variant="shop" size="xxl">Shop now</Button>
-        <Button className='btn-view' variant="view" size="xxl">View more</Button>
-        </>
-
-    )
+      <Button className="btn-shop" variant="shop" size="xxl">
+        Shop now
+      </Button>
+      <Button className="btn-view" variant="view" size="xxl">
+        View more
+      </Button>
+    </>
+  );
 }
 
-export default Buttons
+export default Buttons;

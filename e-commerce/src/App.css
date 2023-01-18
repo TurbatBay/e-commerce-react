@@ -411,7 +411,7 @@
 
 /* SINGLE PAGE STARTS HERE */
 
-.single-page-container {
+.single-page-top-container {
   display: flex;
   justify-content: space-between;
   padding-bottom: 300px;
@@ -494,7 +494,118 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
+  width: 60%;
+  font-size: 18px;
+  font-weight: 500;
+}
+/* right-quantity */
+
+.single-quantity-container {
+  display: flex;
+  width: 50%;
+}
+.single-quantity-form-container {
+  width: 100%;
+}
+#myform {
+  padding: 5px;
+}
+.qty {
+  width: 3rem;
+  height: 2rem;
+  text-align: center;
+}
+input.qtyplus {
+  width: 2rem;
+  height: 2rem;
+}
+input.qtyminus {
+  width: 2rem;
+  height: 2rem;
+}
+/* SINGLE CART ADD CART */
+.single-add-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.btn-shop {
+  background-color: #eda415;
+  color: white;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 22.7px;
+  border: none;
+  width: 17rem;
+  height: 4rem;
+}
+
+.btn-xxl {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-view {
+  background-color: #fff;
+  color: #316887;
+  border: 1px solid #316887;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.btn-xxl {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+.heart {
+  color: black;
+  font-size: 30px;
+  border-radius: 30px;
+  height: 100%;
+  width: 10%;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(187, 182, 182);
+}
+
+.single-desc-rev-btns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* single review section */
+
+.single-review-container {
+  border: 1px grey solid;
+  border-radius: 20px;
+}
+.single-review-inner-container {
+  padding: 40px;
+}
+.single-review-h4 {
+  font-weight: 600;
+  font-size: 22.7px;
+  color: #003f62;
+}
+.single-review-p {
+  font-size: 19.7px;
+  color: #4f4f4f;
+}
+.single-review-a-container {
+  background-color: #003555;
+  width: 12%;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.single-review-a {
+  color: white;
+  padding: 10px;
 }
 
 /* Register button */
