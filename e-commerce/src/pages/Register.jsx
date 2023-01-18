@@ -18,8 +18,8 @@ export default function Register() {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
+    <div className="register-form-container">
+      <form onSubmit={onSubmit} className="register-form-flex">
         <label htmlFor="email">Email:</label>
         <input name="email" type="email" /> <br />
         <label htmlFor="username">UserName:</label>

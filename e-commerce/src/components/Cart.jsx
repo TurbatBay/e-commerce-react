@@ -1,10 +1,24 @@
 import ReactStars from "react-rating-stars-component";
 import React from "react";
 import { Link } from "react-router-dom";
+import HeartFilled from "./images/heart-solid.svg";
+import HeartOutline from "./images/heart-regular.svg";
+import popularData from "../data/popularCard";
+import { useState } from "react";
 
 function Cart(props) {
-  let Icon = props.isWishlisted ? "heart-regular.svg" : "heart-solid.svg";
+  let Icon = props.isWishlisted ? `${HeartFilled}` : `${HeartOutline}`;
+
+  const [contact, setContact] = useState({});
+
   function toggleWishlist() {
+    setContact((prevContact) => {
+      return {
+        ...prevContact,
+        isWishlisted: !prevContact.isWishlisted,
+        //complex stae updating state object lesson
+      };
+    });
     console.log("Toggle Wishlist");
   }
   const ratingChanged = (newRating) => {
@@ -20,11 +34,7 @@ function Cart(props) {
           <p className="popular-card-p1">{props.title}</p>
           <p className="popular-card-p2">{props.price}</p>
           <div>
-            <img
-              src={`./images/images/${Icon}`}
-              width="50px"
-              onClick={toggleWishlist}
-            />
+            <img src={Icon} width="50px" onClick={toggleWishlist} />
           </div>
 
           <ReactStars
