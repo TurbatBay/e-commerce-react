@@ -45,6 +45,8 @@ function Cart(props) {
                   const likedProduct = {
                     id: props.id,
                     name: props.title,
+                    price: props.price,
+                    imgURL: props.imgURL,
                     liked: true,
                   };
                   props.setWishlist([...props.wishlist, likedProduct]);
