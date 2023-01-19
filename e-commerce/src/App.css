@@ -214,6 +214,9 @@
   object-fit: cover;
   align-self: center;
 }
+.popular-heart {
+  width: 40px;
+}
 
 /* TRUST SECTION CONTAINER */
 

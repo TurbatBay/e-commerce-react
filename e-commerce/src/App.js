@@ -11,12 +11,15 @@ import NotFound from "./pages/NotFound";
 import About from "./About";
 import SinglePage from "./components/SinglePage";
 import ToasterPage from "./pages/ToasterPage";
+import MainMenu from "./components/MainMenu";
+import { useState } from "react";
 
 function App() {
+  const [wishlist, setWishlist] = useState([]);
   return (
     <div className="App">
       <div className="navbar">
-        <NavBar />
+        <NavBar wishlist={wishlist} setWishlist={setWishlist} />
       </div>
 
       {/* <MainMenu />  */}
@@ -25,7 +28,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/login/register" element={<Register />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home wishlist={wishlist} setWishlist={setWishlist} />}
+        />
         <Route path="/*" element={<NotFound />} />
         <Route path="/detail/:id" element={<SinglePage />} />
         <Route path="/toaster" element={<ToasterPage />} />
@@ -38,16 +44,3 @@ function App() {
 }
 
 export default App;
-
-{
-  <Routes>
-    <Route path="/about" element={<About />} />
-  </Routes>;
-}
-
-{
-  /* <div className="single-page-section section">{singleData}</div> */
-}
-
-{
-}

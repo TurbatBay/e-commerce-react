@@ -1,28 +1,30 @@
 import ReactStars from "react-rating-stars-component";
 import React from "react";
 import { Link } from "react-router-dom";
-import HeartFilled from "./images/heart-solid.svg";
-import HeartOutline from "./images/heart-regular.svg";
 import popularData from "../data/popularCard";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { icons } from "react-icons";
+import { Heart } from "react-bootstrap-icons";
+import { HeartFill } from "react-bootstrap-icons";
 
 function Cart(props) {
-  let Icon = props.isWishlisted ? `${HeartFilled}` : `${HeartOutline}`;
+  let foundProduct = [];
+  popularData.filter((p) => {
+    const filtered = p.children.filter((c) => c.id === props.id);
 
-  const [contact, setContact] = useState({});
+    if (filtered) {
+      foundProduct = filtered;
+    }
+  });
 
-  function toggleWishlist() {
-    setContact((prevContact) => {
-      return {
-        ...prevContact,
-        isWishlisted: !prevContact.isWishlisted,
-        //complex stae updating state object lesson
-      };
-    });
-    console.log("Toggle Wishlist");
-  }
+  const product = foundProduct[0];
+  console.log(product);
+  console.log("wishlist", props.wishlist);
+  const liked = props.wishlist.filter((wish) => wish.id === props.id)[0];
+  console.log(liked);
   const ratingChanged = (newRating) => {
-    console.log(newRating);
+    console.log(liked);
   };
   return (
     <div className="popular-card">
@@ -34,7 +36,27 @@ function Cart(props) {
           <p className="popular-card-p1">{props.title}</p>
           <p className="popular-card-p2">{props.price}</p>
           <div>
-            <img src={Icon} width="50px" onClick={toggleWishlist} />
+            <a
+              className="popular-heart"
+              onClick={() => {
+                console.log("heart is clicked");
+
+                if (!liked) {
+                  const likedProduct = {
+                    id: props.id,
+                    name: props.title,
+                    liked: true,
+                  };
+                  props.setWishlist([...props.wishlist, likedProduct]);
+                } else {
+                  props.setWishlist(
+                    props.wishlist.filter((w) => w.id !== props.id)
+                  );
+                }
+              }}
+            >
+              {!liked ? <Heart /> : <HeartFill />}
+            </a>
           </div>
 
           <ReactStars

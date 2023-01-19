@@ -18,9 +18,10 @@ import SinglePage from "./SinglePage";
 import { Link } from "react-router-dom";
 import SmallCard from "./SmallCard";
 import cardData from "../data/card";
-function MainMenu() {
+function MainMenu(props) {
   const popData = popularData.map((data) => {
-    const children = data.children.map((d) => {
+    const children = data.children.map((d, index) => {
+      console.log(props.wishlist);
       return (
         <Cart
           className={d.className}
@@ -29,7 +30,9 @@ function MainMenu() {
           price={d.price}
           rating={d.rating}
           id={d.id}
-          isWishlisted={d.isWishlisted}
+          key={index}
+          wishlist={props.wishlist}
+          setWishlist={props.setWishlist}
         />
       );
     });
